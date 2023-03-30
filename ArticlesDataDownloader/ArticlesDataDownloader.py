@@ -22,6 +22,8 @@ from ArticlesDataDownloader.pdfs.extract_text_from_pdf import read_pdf_as_json
 
 
 class ArticlesDataDownloader:
+    ##AKA_Feb22: print to test
+    print(f'Entering ArticlesDataDownloader...')
     def __init__(self, output_folder, proxy_file=None):
         self.__outputFolder = output_folder
         self.__handlers = None
@@ -30,6 +32,9 @@ class ArticlesDataDownloader:
         self.__refworks_downloader = RefworksDataDownloader()
         self.__scopus_downloader = None
         self._driver = None
+        
+        ##AKA_Feb22: print to test
+        print(f'In ArticlesDataDownloader...')
 
     def get_doi_filename(self, doi):
         return getDoiFilename(self.__outputFolder, doi)
@@ -56,6 +61,11 @@ class ArticlesDataDownloader:
         return os.path.isfile(filename)
 
     def get_handlers(self):
+        '''
+        AKA_Feb22: 
+        This fxn is instrumental in getting the appropriate 'handler'
+        to commence download of articles based on the driver and link
+        '''
         if self.__handlers is None:
             if self._driver is None:
                 self._driver = getDriver(proxyFile=self.__proxyFile)
@@ -69,6 +79,10 @@ class ArticlesDataDownloader:
         return self.__handlers
 
     def get_scopus_downloader(self):
+        '''
+        AKA_Feb22:
+        It appears scopus is handled separately. apparently because of its structure and it's 'subscription' based.
+        '''
         if self.__scopus_downloader is None:
             if self._driver is None:
                 self._driver = getDriver(proxyFile=self.__proxyFile)
@@ -110,6 +124,12 @@ class ArticlesDataDownloader:
 
 
     def readArticle(self, doi, scopus_link, publisher_link=''):
+        '''
+        AKA_Feb22:
+        The handler gets the driver to open instance of chromium
+        
+        '''
+        
         self.__logger.info("Reading doi : " + doi)
         if self.doi_has_result_already(doi):
             self.__logger.info("Doi " + doi + " already parsed")
@@ -128,10 +148,15 @@ class ArticlesDataDownloader:
 
         self.__logger.info("Publisher link is " + str(publisher_link))
 
+        ##AKA_Feb22: print to test
+        print(f'AKA_Feb22: Entering get_handlers in ArticlesDataDownloader ...')
+        print(f'the primary publisher link is: {publisher_link} ')
+            
         for handler in self.get_handlers():
             self.__logger.debug("Checking " + handler.name())
             if handler.is_applicable(publisher_link):
                 self.__logger.info("Link will be handled by " + handler.name())
+                ##AKA_Feb22: Note: get_article fxn from the handler.
                 article = handler.get_article(publisher_link)
 
                 if article is None:

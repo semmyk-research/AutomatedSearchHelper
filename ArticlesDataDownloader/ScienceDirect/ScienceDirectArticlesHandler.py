@@ -1,9 +1,19 @@
+## AKA_Feb22: edit
+## //TODO: Selenium methods to be updated - such as find_element_by_id | find_element_by_xpath
+
+## Load libraries
+import shutil
+import sys
+import time
 import os
 
 from ArticlesDataDownloader.ScienceDirect.science_direct_html_to_json import science_direct_html_to_json
 
 import re
 import logging
+## AKA_Feb22: add import By - to fix xpath | #pending
+from selenium.webdriver.common.by import By
+
 from selenium.webdriver.support.wait import WebDriverWait
 from ArticlesDataDownloader.ArticleData import ArticleData
 from ArticlesDataDownloader.download_pdf_and_prepare_article_data import download_pdf_and_prepare_article_data
@@ -11,11 +21,13 @@ from ArticlesDataDownloader.download_utilities import wait_until_all_files_downl
     clear_download_directory, get_files_from_download_directory, download_pdf, \
     download_file_from_link_that_initiates_download
 from ArticlesDataDownloader.ris_to_article_data import ris_to_article_data
-import time
+##import time
 
 def article_ready(x):
     found = False
     try:
+        ##AKA_Feb22: print test
+        print(f'try article_ready in ScienceDirectArticlesHandler ... element "body"')
         x.find_element_by_id("body")
         found = True
     except:
@@ -42,6 +54,11 @@ class ScienceDirectArticlesHandler():
         clear_download_directory()
 
         self.driver.get(url)
+        ##AKA_Feb22: putting a sleep to allow the user to log in.
+        ## TODO: create a class to test if user is checked in, direct to log in and pass url before extracting article elements
+        time_wait = 30
+        print(f'in ScienceDirectArticlesHandler: get_article \n sleeping for {time_wait}s after instance of chromium')
+        time.sleep(time_wait)
 
         WebDriverWait(self.driver, 10).until(
             lambda x: x.find_element_by_xpath("//div[@id='popover-trigger-export-citation-popover']/button/span"))
