@@ -45,13 +45,15 @@ def download_acm_citations_from_search_link(driver, link, output_directory):
         
         time.sleep(9)  ##(9)
         
+        '''
         select_all_checkbox = WebDriverWait(driver, time_wait).until(
             lambda x: x.find_element_by_xpath("//label[@for='select-all-results']/span"))
         '''
-        ##select_all_checkbox = WebDriverWait(driver, time_wait).until(
-            lambda x: x.find_element(By.XPATH, "element_xpath")("//label[@for='select-all-results']/span"))
-        print(f'download_..._search_Link: selecting all checkbox')
-        '''
+        ##AKA_Apr23: Change in Selenium 4.3.0: 
+        select_all_checkbox = WebDriverWait(driver, time_wait).until(
+            lambda x: x.find_element(By.XPATH, "//label[@for='select-all-results']/span"))
+        print(f'downloadSDcitation4mSearchLink_..._search_Link: selecting all checkbox')
+        
         ## Refer bottom for XPATH
         
         desired_y = (select_all_checkbox.size['height'] / 2) + select_all_checkbox.location['y']
@@ -66,20 +68,36 @@ def download_acm_citations_from_search_link(driver, link, output_directory):
         select_all_checkbox.click()
         ##print(f'download_.._search_Link: selected {str(select_all_checkbox.click().value)}')
 
+        '''
         export_button = WebDriverWait(driver, time_wait).until(
             lambda x: x.find_element_by_xpath("//span[@class='export-all-link-text']"))
         export_button.click()
+        '''
+        ##AKA_Apr23: Change in Selenium 4.3.0: 
+        export_button = WebDriverWait(driver, time_wait).until(
+            lambda x: x.find_element(By.XPATH, "//span[@class='export-all-link-text']"))
+        export_button.click()
 
+        '''
         ris_button = WebDriverWait(driver, time_wait).until(
             lambda x: x.find_element_by_xpath("//span[contains(text(),'Export citation to RIS')]"))
+        '''
+        ris_button = WebDriverWait(driver, time_wait).until(
+            lambda x: x.find_element(By.XPATH, "//span[contains(text(),'Export citation to RIS')]"))
 
         file = download_file_from_click_of_button(driver, ris_button)
         if file:
             shutil.move(file, output_filename)
 
         try:
+            '''
             next_page_button = WebDriverWait(driver, time_wait).until(
                 lambda x: x.find_element_by_xpath("//a[@data-aa-name='srp-next-page']"))
+            '''
+            ##AKA_Apr23: Change in Selenium 4.3.0: 
+            next_page_button = WebDriverWait(driver, time_wait).until(
+                lambda x: x.find_element(By.XPATH, "//a[@data-aa-name='srp-next-page']"))
+            
             link = next_page_button.get_attribute('href')
             driver.get(link)
         except:
@@ -225,7 +243,7 @@ def check_linkpage(driver, link, output_dir):
     '''
     ## Beware 'link-button-text' may return 'Sign in' or 'Register'
         
-    ##AKA_Mar22: Moved to wile loop
+    ##AKA_Mar22: Moved to while loop
     ##print(f'In check_linkpage, catch_isElementPresent text: "{catch_isElementPresent.e_locator_text}"')
     ## fxn attribute outside of fxn
     ## See https://stackoverflow.com/questions/19326004/access-a-function-variable-outside-the-function-without-using-global/19327712
@@ -350,6 +368,7 @@ if __name__ == '__main__':
 
         
 '''
+AKA_Feb22 || ##AKA_Apr23: Change in Selenium 4.3.0: 
         Using xpath:
         element = find_element_by_xpath("element_xpath")
         Needs be replaced with:

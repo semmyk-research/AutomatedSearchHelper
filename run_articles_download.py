@@ -37,7 +37,9 @@ def getArgumentsParser():
     parser.add_argument('--output_articles', default='outputArticles', type=str, help='Location for articles .json files')
     ## AKA_Feb22: change arg --proxy_file to no-proxy-server 11Feb22
     parser.add_argument('--no-proxy-server')
-    parser.add_argument('--articles_list', default='DT-define_GS-search-08Feb22-02.2.ris', type=str, help='file containing articles data in supported format')
+    ##parser.add_argument('--articles_list', default='DT-define_GS-search-08Feb22-02.2.ris', type=str, help='file containing articles data in supported format')
+    ##AKA_Apr23: redirect default article list to a small list
+    parser.add_argument('--articles_list', default='doi_ScienceDirect_article_list_test.ris', type=str, help='file containing articles data in supported format')
     parser.add_argument('--file_type', default=3, type=int, help='File format: '
                                                                  '1- SCOPUS_CSV (default), '
                                                                  '2- IEEE_CSV '

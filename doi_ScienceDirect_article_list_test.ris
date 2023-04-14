@@ -1,0 +1,96 @@
+TY  - JOUR
+T1  - Stock market reactions to favorable and unfavorable information security events: A systematic literature review
+AU  - Ali, Syed Emad Azhar
+AU  - Lai, Fong-Woon
+AU  - Dominic, P.D.D.
+AU  - Brown, Nicholas James
+AU  - Lowry, Paul Benjamin Benjamin
+AU  - Ali, Rao Faizan
+JO  - Computers & Security
+VL  - 110
+SP  - 102451
+PY  - 2021
+DA  - 2021/11/01/
+SN  - 0167-4048
+DO  - https://doi.org/10.1016/j.cose.2021.102451
+UR  - https://www.sciencedirect.com/science/article/pii/S0167404821002753
+KW  - Event study methodology (ESM)
+KW  - Information security (ISec) breaches
+KW  - Systematic literature review (SLR)
+KW  - ISec events
+KW  - ISec investments
+KW  - Efficient market hypothesis
+KW  - Contingency factors
+KW  - Abnormal returns
+AB  - The rapid digital transformations across every industry sector, accelerated partly due to the COVID-19 pandemic, have increased organizations’ use of information systems for operational and strategic purposes. These organizational responses have led to a confluence of digital, biological, and physical technologies that are revolutionizing business practices and workflows. But accompanying the pervasive use of digital technologies and the evolutionary nature of digital assets, is a shifting world of cyberattacks and information security (ISec) cybercrimes. Dynamic cybercrimes make it increasingly difficult for managers and researchers to anticipate the types, magnitude, and severity of future information security (ISec) breaches. Thus, we perform a systematic literature review (SLR) that explores, gathers, and categorizes event studies to examine the influence of favorable and unfavorable ISec events on stock markets. We extend the research conducted by Spanos and Angelis (2016) and provide a comprehensive understanding of the market’s efficiency to process public information released about ISec events, ISec contingency factors, and the influence of ISec events on stock prices and factors other than price. Our systematic search reveals 58 relevant papers that include 80 studies. We find that in 75% of the studies ISec events can significantly affect a company’s stock market performance, and that such effects are primarily exhibited within two days before and after the event day. Further, the magnitude of abnormal returns is higher in studies examining unfavorable ISec events, such as ISec breaches, compared to abnormal returns from favorable events, such as ISec investments and ISec certifications. In the end, our SLR serves as a foundation for ISec and management communities to build upon to keep industry and academia apprised of continually developing trends, new attack vectors and types of data breaches, protective ISec behaviors and programs, and their subsequent influences on stock market values and returns.
+ER  - 
+
+TY  - JOUR
+T1  - Barriers and enablers to adoption of cyber insurance in developing countries: An exploratory study of Malaysian organizations
+AU  - Abdul Hamid, Nor Hasnul Azirah
+AU  - Mat Nor, Normalina Ibrahim @
+AU  - Hussain, Fazlin Marini
+AU  - Raju, Rajeswari
+AU  - Naseer, Humza
+AU  - Ahmad, Atif
+JO  - Computers & Security
+VL  - 122
+SP  - 102893
+PY  - 2022
+DA  - 2022/11/01/
+SN  - 0167-4048
+DO  - https://doi.org/10.1016/j.cose.2022.102893
+UR  - https://www.sciencedirect.com/science/article/pii/S0167404822002863
+KW  - Cyber insurance
+KW  - Cyber security
+KW  - Barriers
+KW  - Enablers
+KW  - Adoption of cyber insurance
+KW  - Malaysia
+AB  - Cyber insurance presents a compelling value proposition for organizations wanting to reduce risk exposure and recover losses from incidents. However, the adoption rate of cyber insurance outside first-world countries has been relatively low. In this paper we focus on the interesting case of Malaysia – a nation with a low rate of cyber insurance adoption despite its ranking among the top ten countries with the highest level of commitment to cybersecurity. We conducted an exploratory study to investigate the key barriers and enablers to cyber insurance adoption in Malaysia. Following a hybrid approach of deductive and inductive reasoning, we reviewed the literature to identify barriers and enablers to the adoption of cyber insurance. Subsequently, we conducted eight semi-structured interviews with experts from seven Malaysian organizations. Based on the qualitative and quantitative analysis of interviews, we developed a ranked list of twelve barriers and seven enablers to the adoption of cyber insurance. Our study makes two key contributions. First, it contributes to cyber insurance literature by providing the most comprehensive explanation to date for the low rate of cyber insurance adoption in developing countries. Second, our ranked lists provide prioritized guidance to cyber insurance stakeholders (e.g. government, regulatory authorities, insurance providers, and insurance policyholders) on the specific barriers to overcome and enablers to leverage in order to improve the adoption of cyber insurance in Malaysia.
+ER  - 
+
+TY  - JOUR
+T1  - Towards a conceptual definition for IT assets through interrogating their nature and epistemic uncertainty
+AU  - Adesemowo, A. Kayode
+JO  - Computers & Security
+VL  - 105
+SP  - 102131
+PY  - 2021
+DA  - 2021/06/01/
+SN  - 0167-4048
+DO  - https://doi.org/10.1016/j.cose.2020.102131
+UR  - https://www.sciencedirect.com/science/article/pii/S0167404820304041
+KW  - Risk
+KW  - Epistemic uncertainty
+KW  - Tangibility
+KW  - Critical realism
+KW  - Digital transformation
+KW  - Information assets
+KW  - Conceptual definition
+KW  - IT assets
+AB  - Security breaches and consequentially reputational risk are upon us on an almost daily basis. They are part of the risk that beset organizations as they innovate and derive value from their information technology (IT) investments. IT assets that must be identified and safeguarded, and values extracted from them are contributors to the risk. Literature is awash with models of threats to assets and use of mid-range theories. There is a growing literature on digital technologies within digital transformation. However, intrinsic nature and epistemic uncertainty of IT assets have not received attention. Therefore, how can a conceptual definition for IT assets flow from understanding their nature, given their inherent epistemic uncertainty? Drawing from critical realism principles, this paper investigates existing definitions for- and re-interrogates the tangible nature (tangibility) of IT assets. It was found that despite their ubiquity and due to their evolving nature, IT assets lack universal understanding and definition. Executives (and professionals) views about IT assets are informed by their industry sector and role (present and/or previous). Consequently, this paper recommends a conceptual definition of IT assets that would assist; with coherence in the asset identification stage of risk assessment, (possibly IT audits and IT valuation programs), with understanding of the intrinsic nature of IT assets in themselves, and aid organizations in holistically engaging with IT assets. This paper's IT assets definition contributes to the call for theorizing the “IT” in IT. It poses new probing questions about ‘old’, ‘established’ beliefs as IT assets evolve in the era of digital transformation, fourth industrial revolution, knowledge economy and beyond.
+ER  - 
+
+TY  - JOUR
+T1  - Cybersecurity capabilities and cyber-attacks as drivers of investment in cybersecurity systems: A UK survey for 2018 and 2019
+AU  - Fernandez De Arroyabe, Ignacio
+AU  - Arranz, Carlos F.A.
+AU  - Arroyabe, Marta F.
+AU  - Fernandez de Arroyabe, Juan Carlos
+JO  - Computers & Security
+VL  - 124
+SP  - 102954
+PY  - 2023
+DA  - 2023/01/01/
+SN  - 0167-4048
+DO  - https://doi.org/10.1016/j.cose.2022.102954
+UR  - https://www.sciencedirect.com/science/article/pii/S0167404822003467
+KW  - Cybersecurity capabilities
+KW  - Cyber-attacks
+KW  - Organizations’ strategy
+KW  - Cybersecurity investment
+KW  - Cybersecurity systems
+KW  - Machine learning
+AB  - Our study explores how cyber-capabilities and cyber-attacks drive investment in cybersecurity systems. We assume that cybersecurity investment is a strategic decision in the organizations. To analyze this research question, we make use of the Cyber Security Breaches Survey data, with a sample consisting of 4,163 UK organizations in the periods 2018 to 2019, and employ machine learning techniques (ANN and K-mean cluster). The study extends the current literature on cybersecurity systems and improves our understanding of it in several ways. First, it provides evidence for how the cybersecurity systems are developed in organizations. Second, regarding what factors affect investment in cybersecurity systems, it shows that organizations invest in cybersecurity based on their cybersecurity capabilities and the experienced cyber-attacks. Third, from a managerial point of view, the paper contributes to understanding cybersecurity within the management of the organization.
+ER  - 

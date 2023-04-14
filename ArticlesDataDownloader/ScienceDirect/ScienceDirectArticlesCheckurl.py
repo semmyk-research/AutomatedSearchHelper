@@ -1,5 +1,6 @@
 ## AKA_Feb22: edit
 ## //TODO: Selenium methods to be updated - such as find_element_by_id | find_element_by_xpath
+## AKA_Apr23: Selenium 4.3.0 find_element fix
 
 ## Load libraries
 import shutil
@@ -206,17 +207,28 @@ class ScienceDirectArticlesCheckurl():
         time.sleep(time_wait)
         '''
 
-        WebDriverWait(self.driver, 10).until(
+        ## AKA_Apr23: Change in Selenium 4.3.0:  https://stackoverflow.com/a/75489249/20107918
+        '''WebDriverWait(self.driver, 10).until(
             lambda x: x.find_element_by_xpath("//div[@id='popover-trigger-export-citation-popover']/button/span"))
+        '''
+        WebDriverWait(self.driver, 10).until(
+            lambda x: x.find_element(By.XPATH, "//div[@id='popover-trigger-export-citation-popover']/button/span"))
 
-        export_button = WebDriverWait(self.driver, 15).until(
+        '''export_button = WebDriverWait(self.driver, 15).until(
             lambda x: x.find_element_by_xpath("//div[@id='popover-trigger-export-citation-popover']/button"))
+        '''
+        export_button = WebDriverWait(self.driver, 15).until(
+            lambda x: x.find_element(By.XPATH, "//div[@id='popover-trigger-export-citation-popover']/button"))
+                
         time.sleep(1)
         export_button.click()
 
-
+        '''
         ris_download_button = WebDriverWait(self.driver, 15).until(
             lambda x: x.find_element_by_xpath("//button[@aria-label='ris']"))
+        '''
+        ris_download_button = WebDriverWait(self.driver, 15).until(
+            lambda x: x.find_element(By.XPATH, "//button[@aria-label='ris']"))
 
         ris_download_button.click()
         time.sleep(1) # wait until download initiated
@@ -231,8 +243,12 @@ class ScienceDirectArticlesCheckurl():
         try:
             self.driver.get(url)
             self.__logger.debug("Called get for  " + url)
-            WebDriverWait(self.driver, 15).until(
+            ##AKA_Apr23: Change in Selenium 4.3.0: 
+            '''WebDriverWait(self.driver, 15).until(
                 lambda x: x.find_element_by_xpath("//section[contains(@id, 'sec')]"))
+            '''
+            WebDriverWait(self.driver, 15).until(
+                lambda x: x.find_element(By.XPATH, "//section[contains(@id, 'sec')]"))
             result_data.merge(ArticleData(text=science_direct_html_to_json(self.driver.page_source)))
             result_data.read_status = 'OK'
         except Exception as error:
