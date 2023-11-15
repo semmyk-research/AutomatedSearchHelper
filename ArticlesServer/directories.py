@@ -1,3 +1,4 @@
+## AKA_Feb22: Default changed to sciencedirect
 import os
 
 BASE_DIRECTORY = os.path.join(os.getcwd(), '.server_files')
@@ -15,8 +16,8 @@ FINDER_FILE = os.path.join(BASE_DIRECTORY, 'finder.txt')
 from ArticlesDataDownloader.InputSourceType import InputSourceType
 
 PUBLISHER_INPUT_DIRECTORIES_AND_FILE_TYPES = [
-    ('IEEE CSV', os.path.join(INPUT_FILES_DIRECTORY, 'IEEE'), InputSourceType.IEEE_CSV),
-    # ('Science direct RIS', os.path.join(INPUT_FILES_DIRECTORY, 'Science_direct'), InputSourceType.SCIENCE_DIRECT_RIS),
+    #AKA_Feb22 ('IEEE CSV', os.path.join(INPUT_FILES_DIRECTORY, 'IEEE'), InputSourceType.IEEE_CSV),
+     ('Science direct RIS', os.path.join(INPUT_FILES_DIRECTORY, 'Science_direct'), InputSourceType.SCIENCE_DIRECT_RIS),
     # ('Springer CSV', os.path.join(INPUT_FILES_DIRECTORY, 'Springer'), InputSourceType.SPRINGER_CSV),
     # ('Willey BIB', os.path.join(INPUT_FILES_DIRECTORY, 'Willey'), InputSourceType.WILLEY_BIB),
     # ('ACM BIB', os.path.join(INPUT_FILES_DIRECTORY, 'ACM'), InputSourceType.ACM_BIB),
